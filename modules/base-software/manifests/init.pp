@@ -1,4 +1,4 @@
-class base_software {
+class base-software {
 
   pkgs = ['curl']
 
