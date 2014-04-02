@@ -1,0 +1,18 @@
+namespace :vagrant do
+  desc "Vagrant up"
+  task :up do
+    sh(vagrant up)
+  end
+
+  desc "Vagrant destroy"
+  task :destroy do
+    sh(vagrant destroy -f)
+  end
+
+  desc "Vagrant destroy and Vagrant up"
+  task :rebuild do
+    ['vagrant:destroy', 'vagrant:up']
+  end
+
+end
+
